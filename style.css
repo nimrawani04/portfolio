@@ -1,0 +1,168 @@
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FFF8F9;
+    color: #5D5D5D;
+}
+
+.font-heading {
+    font-family: 'Playfair Display', serif;
+    color: #D87093;
+}
+
+.font-script {
+    font-family: 'Sacramento', cursive;
+    color: #E6A4B4;
+}
+
+/* Expanded styles for .nav-link (previously using @apply) */
+.nav-link {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    transition-property: color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.nav-link:hover {
+    color: #D87093;
+}
+
+.section {
+    padding-top: 3rem;
+
+    padding-bottom: 3rem;
+
+    padding-left: 1.5rem;
+
+    padding-right: 1.5rem;
+
+}
+
+@media (min-width: 768px) {
+
+    .section {
+        padding-top: 5rem;
+ 
+        padding-bottom: 5rem;
+       
+        padding-left: 3rem;
+        
+        padding-right: 3rem;
+    }
+}
+
+.card {
+    background-color: #ffffff;
+   
+    padding: 1.5rem;
+ 
+    border-radius: 0.75rem;
+
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+@media (min-width: 768px) {
+    .card {
+        padding: 2rem;
+    }
+}
+
+
+.btn-primary {
+    background-color: #D87093;
+    color: white;
+    font-weight: 700;
+
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border-radius: 0.5rem;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary:hover {
+    background-color: #C76083;
+}
+
+.icon-placeholder {
+    width: 3rem;
+    height: 3rem;
+    background-color: #F5E6E8;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D87093;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Hero section with blurred background */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.bg-pattern-light {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.bg-pattern-light::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("bg-white");
+    background-position: center;
+    background-repeat: repeat;
+    filter: blur(4px);
+    z-index: -1;
+
+}
+.bg-pattern-light>.container {
+    position: relative;
+    z-index: 1;
+}
